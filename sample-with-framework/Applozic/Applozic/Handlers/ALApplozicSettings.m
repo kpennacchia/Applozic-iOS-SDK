@@ -127,6 +127,17 @@
     return [[NSUserDefaults standardUserDefaults] boolForKey:REFRESH_BUTTON_VISIBILITY];
 }
 
++(void)hideAttachmentButton:(BOOL)state
+{
+	[[NSUserDefaults standardUserDefaults] setBool:state forKey:ATTACHMENT_BUTTON_VISIBILITY];
+	[[NSUserDefaults standardUserDefaults] synchronize];
+}
+
++(BOOL)isAttachmentButtonHidden
+{
+	return [[NSUserDefaults standardUserDefaults] boolForKey:ATTACHMENT_BUTTON_VISIBILITY];
+}
+
 +(void)setTitleForBackButtonMsgVC:(NSString *)backButtonTitle
 {
     [[NSUserDefaults standardUserDefaults] setValue:backButtonTitle forKey:BACK_BUTTON_TITLE];

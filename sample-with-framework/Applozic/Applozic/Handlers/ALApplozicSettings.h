@@ -12,6 +12,7 @@
 #define NAVIGATION_BAR_COLOUR @"com.applozic.userdefault.NAVIGATION_BAR_COLOUR"
 #define NAVIGATION_BAR_ITEM_COLOUR @"com.applozic.userdefault.NAVIGATION_BAR_ITEM_COLOUR"
 #define REFRESH_BUTTON_VISIBILITY @"com.applozic.userdefault.REFRESH_BUTTON_VISIBILITY"
+#define ATTACHMENT_BUTTON_VISIBILITY @"com.applozic.userdefault.ATTACHMENT_BUTTON_VISIBILITY"
 #define CONVERSATION_TITLE @"com.applozic.userdefault.CONVERSATION_TITLE"
 #define BACK_BUTTON_TITLE @"com.applozic.userdefault.BACK_BUTTON_TITLE"
 #define FONT_FACE @"com.applozic.userdefault.FONT_FACE"
@@ -108,6 +109,10 @@
 +(void)hideRefreshButton:(BOOL)state;
 
 +(BOOL)isRefreshButtonHidden;
+
++(void)hideAttachmentButton:(BOOL)state;
+
++(BOOL)isAttachmentButtonHidden;
 
 +(void)setTitleForConversationScreen:(NSString *)titleText;
 

@@ -135,6 +135,20 @@ static CGFloat const sendTextViewCornerRadius = 15.0f;
         [self.navRightBarButtonItems addObject:refreshButton];
     }
 
+	self.attachmentOutlet.hidden = [ALApplozicSettings isAttachmentButtonHidden];
+	if ([ALApplozicSettings isAttachmentButtonHidden])
+	{
+		// The attachment button has been hidden, now change it's width to zero
+		// so that the message input field takes up the newly available space
+		[NSLayoutConstraint constraintWithItem:self.attachmentOutlet
+									 attribute:NSLayoutAttributeWidth
+									 relatedBy:NSLayoutRelationEqual
+										toItem:NULL
+									 attribute:NSLayoutAttributeWidth
+									multiplier:1
+									  constant:0].active = YES;
+	}
+
     self.navigationItem.rightBarButtonItems = [self.navRightBarButtonItems mutableCopy];
     
     self.label = [[UILabel alloc] init];

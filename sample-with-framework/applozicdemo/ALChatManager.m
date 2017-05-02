@@ -365,6 +365,7 @@
     [ALApplozicSettings setColorForNavigation:[UIColor colorWithRed:66.0/255 green:173.0/255 blue:247.0/255 alpha:1]];
     [ALApplozicSettings setColorForNavigationItem:[UIColor whiteColor]];
     [ALApplozicSettings hideRefreshButton:NO];
+	[ALApplozicSettings hideAttachmentButton:NO];                         /* SET VISIBLITY FOR ATTACHMENT BUTTON (USED IN THE CHAT VC) */
     [ALUserDefaultsHandler setNavigationRightButtonHidden:NO];
     [ALUserDefaultsHandler setBottomTabBarHidden:NO];
     [ALApplozicSettings setTitleForConversationScreen:@"Chats"];
