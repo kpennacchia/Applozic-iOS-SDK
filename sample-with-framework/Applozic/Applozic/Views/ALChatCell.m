@@ -5,7 +5,6 @@
 //  Copyright (c) 2015 AppLozic. All rights reserved.
 //
 
-#define MESSAGE_TEXT_SIZE 14
 #define DATE_LABEL_SIZE 12
 
 #import "ALChatCell.h"
@@ -98,7 +97,7 @@
             fontName = DEFAULT_FONT_NAME;
         }
         
-        self.mMessageLabel.font = [UIFont fontWithName:[ALApplozicSettings getFontFace] size:MESSAGE_TEXT_SIZE];
+        self.mMessageLabel.font = [UIFont fontWithName:[ALApplozicSettings getFontFace] size:[ALApplozicSettings getFontSizeForMessages]];
         self.mMessageLabel.textColor = [UIColor grayColor];
         [self.contentView addSubview:self.mMessageLabel];
         
@@ -357,7 +356,7 @@
     
     /*    ====================================== END =================================  */
     
-    self.mMessageLabel.font = [UIFont fontWithName:[ALApplozicSettings getFontFace] size:MESSAGE_TEXT_SIZE];
+    self.mMessageLabel.font = [UIFont fontWithName:[ALApplozicSettings getFontFace] size:[ALApplozicSettings getFontSizeForMessages]];
     if(alMessage.contentType == ALMESSAGE_CONTENT_TEXT_HTML)
     {
         

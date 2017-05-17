@@ -82,7 +82,7 @@
         [self.contentView addSubview:self.mDowloadRetryButton];
 
         self.imageWithText = [[UITextView alloc] init];
-        [self.imageWithText setFont:[UIFont fontWithName:[ALApplozicSettings getFontFace] size:MESSAGE_TEXT_SIZE]];
+        [self.imageWithText setFont:[UIFont fontWithName:[ALApplozicSettings getFontFace] size:[ALApplozicSettings getFontSizeForMessages]]];
         self.imageWithText.editable = NO;
         self.imageWithText.scrollEnabled = NO;
         self.imageWithText.textContainerInset = UIEdgeInsetsZero;

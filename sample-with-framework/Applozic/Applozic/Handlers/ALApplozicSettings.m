@@ -86,6 +86,17 @@
     return [UIColor whiteColor];
 }
 
++(void)setFontSizeForMessages:(CGFloat)fontSize
+{
+	[[NSUserDefaults standardUserDefaults] setFloat:fontSize forKey:MESSAGE_TEXT_SIZE];
+	[[NSUserDefaults standardUserDefaults] synchronize];
+}
+
++(CGFloat)getFontSizeForMessages
+{
+	return [[NSUserDefaults standardUserDefaults] floatForKey:MESSAGE_TEXT_SIZE];
+}
+
 +(void)setColorForNavigation:(UIColor *)barColor
 {
     NSData *barColorData = [NSKeyedArchiver archivedDataWithRootObject:barColor];
